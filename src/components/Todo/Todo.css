@@ -1,0 +1,13 @@
+/* .scrollpanel-demo .custombar1 {
+    border-right: 10px solid red;
+} */
+
+.scrollpanel-demo .custombar1 {
+    background-color: #818cf8;
+    opacity: 1;
+    transition: background-color .3s;
+}
+
+.scrollpanel-demo .custombar1:hover {
+    background-color: #818cf8;
+}

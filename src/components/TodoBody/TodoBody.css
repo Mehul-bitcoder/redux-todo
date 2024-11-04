@@ -1,0 +1,19 @@
+/* styles.css */
+
+.scrollbar-thin::-webkit-scrollbar {
+    width: 4px; /* Width of the scrollbar */
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #9ca3af; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af; /* Scrollbar color on hover */
+}
+

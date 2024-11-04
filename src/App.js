@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import Todo from './components/Todo/Todo';
+import { PrimeReactProvider } from 'primereact/api';
+import Tailwind from 'primereact/passthrough/tailwind';
+import { twMerge } from 'tailwind-merge';
 
 function App() {
+  const body = document.body
+  const value = {
+    appendTo: body,
+    inputStyle: 'filled',
+    zIndex: {
+      modal: 1100,    // dialog, sidebar
+      overlay: 1000,  // dropdown, overlaypanel
+      menu: 1000,     // overlay menus
+      tooltip: 1100,  // tooltip
+      toast: 1200     // toast
+    },
+    hideOverlaysOnDocumentScrolling: true,
+    autoZIndex: true,
+    unstyled: true,
+    pt: Tailwind,
+    ptOptions: { mergeSections: true, mergeProps: true, classNameMergeFunction: twMerge }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PrimeReactProvider value={value}>
+        <Todo />
+      </PrimeReactProvider>
     </div>
   );
 }
